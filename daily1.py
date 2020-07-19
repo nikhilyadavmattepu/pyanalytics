@@ -62,7 +62,6 @@ type(str1)
 print(str1)
 str2="Yash"
 str2.lower()
-dict?
 dir(str)
 #%% - Sequence
 #sequence - tuple and list are used
