@@ -71,7 +71,8 @@ for i in list1:
     print(i)
   
 for i in list1:    print(i)
-for i in list1:    print('Dhiraj ', i + 6)
+list2=[1,2,3,4]
+for i in list2:    print('Dhiraj ', i + 6)
 
 tuple1
 list5 = ['a',1]
@@ -117,7 +118,13 @@ import numpy
 numpy.array([10,20])
 
 import numpy as np #np is alias
+dir(np)
 np1 = np.arange(1,10)
+np1
+list5=[1,2,3,4,5]
+np3=numpy.array(list5)
+np3
+np3.sum()
 x=np.arange(start=1,stop=1000000,step=2)
 len(x)
 x[1:100]
@@ -154,6 +161,7 @@ df1.describe() #description of numerical values
 df1.dtypes #data types
 df1.shape  # rows and columns
 df1.groupby('gender').size()
+df1.groupby('gender')['marks'].sum()
 df1.groupby('gender')['marks'].mean()
 df1.groupby('gender').aggregate({'marks': [np.mean, 'max','min','std','count']})
 
@@ -183,9 +191,9 @@ import statsmodels.api as sm
 #https://vincentarelbundock.github.io/Rdatasets/datasets.html
 mtcars = sm.datasets.get_rdataset(dataname='mtcars', package= 'datasets')
 mtcars.data.head()
-
+mtcars.data.tail()
 #%%
-#Load from Excel/ CSV and export to
+#Save as Excel/ CSV
 data = mtcars.data
 data.head(6)
 type(data)
